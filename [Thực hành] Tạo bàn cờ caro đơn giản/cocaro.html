@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bàn cờ caro</title>
+</head>
+<body>
+    <p id="carogame">
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <script>
+        let b = document.getElementById("carogame");
+        let board = [];
+        let data = "";
+        for(let i = 0; i < 5; i++) {
+            board[i] = [0, 0, 0, 0, 0]
+        }
+        for(i = 0; i < 5; i++) {
+            data += "</br>";
+            for(let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+        b.innerHTML = data;
+        
+        function changeValue() {
+            let x = prompt("nhap index hang: ");
+            let y = prompt("nhap index cot: ")
+            data = "";
+            board[x][y] = "x"
+            for(i = 0; i < 5; i++) {
+                data += "</br>";
+                for(j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+            b.innerHTML = data;
+        }
+    </script>
+</body>
+</html>

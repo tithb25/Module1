@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>day Fibonacci</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var x = 0; y = 0 ; 
+		var dem ;
+		var count = 0;
+		while (count <= 20) {
+			if(x === 0 && y === 0) {
+				document.write(1 + '<br>');
+				y++;
+			} else {
+				document.write((dem = x + y )+ '<br>');
+				x = y ;
+				y = dem;
+				count++;
+			}
+		}
+	</script>
+</body>
+</html>

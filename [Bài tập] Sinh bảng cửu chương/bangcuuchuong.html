@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+    <script>
+        var hang;
+        var cot;
+        var bang = "<table border='2' width='700' cellspacing='1' cellpadding='4'>";
+        for(hang = 1; hang <= 10; hang++) {
+            bang = bang + "<tr>";
+            for(cot = 2; cot <= 10; cot++) {
+                bang = bang + "<td>" + cot + "x" + hang + "=" + hang * cot + "</td>";
+            }
+            bang = bang + "</tr>";
+        }
+        bang = bang + "</table>";
+        document.write(bang);
+    </script>
+</body>
+</html>

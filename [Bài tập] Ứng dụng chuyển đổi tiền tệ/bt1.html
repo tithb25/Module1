@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Amount</label>
+        <input type="text" name="Amount" id="Amount">
+        <label for="">From Currency</label>
+        <select name="FromCurrency" id="FromCurrency">
+            <option value="VND">Viet Nam</option>
+            <option value="USD">USD</option>
+        </select>
+        <label for="">To Currency</label>
+        <select name="ToCurrency" id="ToCurrency">
+            <option value="USD">USD</option>
+            <option value="VND">Viet Nam</option>
+        </select>
+        <button type="button" id="a" onclick="Convert()">Convert</button>
+    </form>
+    <div id="kq"></div>
+    <script>
+        function Convert() {
+            var Amount = +document.getElementById('Amount').valune;
+            var FromCurrency = document.getElementById('FromCurrency').valune;
+            var ToCurrency = document.getElementById('ToCurrency').valune;
+            if (FromCurrency == "VND" && ToCurrency == "USD") {
+                document.getElementById('kq').innerHTML = Amount / 23000;
+            }
+            if (FromCurrency == "USD" && ToCurrency == "VND") {
+                document.getElementById('kq').innerHTML = Amount * 23000;
+            }
+        }
+    </script>
+</body>
+</html>
