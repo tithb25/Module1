@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <form>
         amount
         <input type="text" name="amount" id="amount">
         From Currency
         <select>
-        <option value="VN">Viet Nam</option>
-        <option value="USD">USD</option>
-    </select>
-    To Currency
-    <select>
-        <option value="VND">Viet Nam</option>
-        <option value="USD">USD</option>
-    </select>
-    <button type="button" id="a" onclick="convert()">Convert</button>   
+            <option value="VN">Viet Nam</option>
+            <option value="USD">USD</option>
+        </select>
+        To Currency
+        <select>
+            <option value="VND">Viet Nam</option>
+            <option value="USD">USD</option>
+        </select>
+        <button type="button" id="a" onclick="convert()">Convert</button>
     </form>
     <p id="kq"></p>
     <script>
         function convert() {
-            var amount =parseFloat(document.getElementById("amount").value);
-            var kq = amount*23000;
+            var amount = parseFloat(document.getElementById("amount").value);
+            var kq = amount * 23000;
             document.getElementById("kq").innerHTML = kq;
         }
     </script>
 </body>
+
 </html>

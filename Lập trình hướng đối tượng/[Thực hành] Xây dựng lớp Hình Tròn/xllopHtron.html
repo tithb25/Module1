@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000px" height="600px" style="border:1px solid #d3d3d3;">
+        <script>
+            let Circle = function (x, y, radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+
+                this.getRadius = function () {
+                    return radius;
+                }
+
+                this.getArea = function () {
+                    return Math.PI * radius * radius;
+                }
+            }
+            let circle1 = new Circle(500, 500, 50);
+            let radius = circle1.getRadius();
+            let area = circle1.getArea();
+            console.log("radius: " + radius + "; area: " + area);
+
+            let circle2 = new Circle(200, 200, 80);
+            radius = circle2.getRadius();
+            area = circle2.getArea();
+            console.log("radius: " + radius + "; area: " + area);
+
+            function createCircle() {
+                var ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.beginPath();
+                ctx.arc(circle1.x, circle1.y, circle1.radius, 0, 2 * Math.PI);
+                ctx.arc(circle2.x, circle2.y, circle2.radius, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+            createCircle();
+        </script>
+</body>
+
+</html>

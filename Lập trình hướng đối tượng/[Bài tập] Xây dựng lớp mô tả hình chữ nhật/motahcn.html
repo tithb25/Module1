@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+        <script>
+            class Rectangle {
+                constructor(hight, weight) {
+                    this.hight = hight;
+                    this.weight = weight;
+                    this.getHight = function () {
+                        return this.hight;
+                    }
+                    this.getWeight = function () {
+                        return this.weight;
+                    }
+                    this.getArea = function () {
+                        return hight * weight;
+                    }
+                    this.getCircuit = function () {
+                        return 2 * (hight + weight);
+                    }
+                    this.setWeight = function (weight) {
+                        this.weight = weight;
+                    }
+                    this.setHight = function (hight) {
+                        this.hight = hight;
+                    }
+                    // this.setArea = function (hight, weight) {
+                    //     var area = hight * weight;
+                    // }
+                    // this.setCircuit = function (hight, weight) {
+                    //     var circuit = 2 * (hight + weight);
+                    // }
+                    this.setRectangle = function (hight, weight) {
+                        this.hight = hight;
+                        this.weight = weight;
+                        this.toString = function () {
+                            console.log(this.hight * this.weight);
+                            //console.log(circuit);
+                        }
+                    }
+                }
+            };
+            var rectangle = new Rectangle(300, 150);
+            var hight = rectangle.getHight();
+            var weight = rectangle.getWeight();
+            console.log(hight + " + " + weight);
+            function createRectangle() {
+                var ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.beginPath();
+                ctx.fillRect(0, 0, this.hight, this.weight);
+            }
+            createRectangle();
+            rectangle.setRectangle(500, 200);
+            rectangle.toString();
+
+            let i = 0;
+            while (i < 3) {
+                console.log(i);
+                i++;
+            }
+        </script>
+</body>
+
+</html>

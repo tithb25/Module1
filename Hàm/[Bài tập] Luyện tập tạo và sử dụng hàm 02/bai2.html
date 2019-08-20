@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var r = +prompt('Nhap ban kinh:');
+        const Pi = 3.14;
+        var cv = chuVi(r);
+        var dt = dienTich(r);
+        function chuVi(r) {
+            var chuvi = 2 * Pi * r;
+            return chuvi;
+        }
+        document.write('Chu vi hình tròn: ' + cv + "</br>");
+        function dienTich(r) {
+            var dientich =  Math.pow(r,2) * Pi;
+            return dientich;
+        }
+        document.write('Diệt tích hình tròn: ' + dt);
+    </script>
+</body>
+</html>

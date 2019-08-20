@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(C) {
+                this.C = C;
+
+                this.getC = function () {
+                    return this.C;
+                }
+
+                this.getF = function () {
+                    return (C * 1.8) + 32;
+                }
+
+                this.getK = function () {
+                    return C + 273.15;
+                }
+            }
+        }
+        var convert = new Temperature(25);
+        var C = convert.getC();
+        var K = convert.getK()
+        var F = convert.getF();
+        console.log("Do F: " + F);
+        console.log("Do K: " + K);
+    </script>
+</body>
+
+</html>

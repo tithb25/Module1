@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="pass"></input>
+    <button type="button" id="check" onclick="checkpass()">Check</button>
+    <script>
+        function checkpass(str) {
+            var str = document.getElementById("pass").value;
+            regexp = /^[A-Za-z0-9]{6,}$/;
+            if (regexp.test(str)) {
+                document.write("pass hợp lệ");
+            } else {
+                document.write("pass không hợp lệ");
+            }
+        }
+    </script>
+</body>
+
+</html>

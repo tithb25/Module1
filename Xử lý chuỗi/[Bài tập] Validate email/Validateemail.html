@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="mail"></input>
+    <button type="button" id="check" onclick="checkmail()">Check</button>
+    <script>
+        function checkmail(str) {
+            str = document.getElementById("mail").value
+            regexp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (regexp.test(str)) {
+                document.write("Email hợp lệ");
+            } else {
+                document.write("Email không hợp lệ");
+            }
+        }
+    </script>
+</body>
+
+</html>

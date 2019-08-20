@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <div class="box">
         <div class="container-1">
@@ -23,16 +25,17 @@
         let kq = document.getElementById("kq");
 
         function search() {
-            for(let tratu in eng) {
-                if(eng[tratu] == input.value) {
+            for (let tratu in eng) {
+                if (eng[tratu] == !input.value) {
+                    document.write("không tìm thấy từ cần tra");
+                } else {
                     kq = vn[tratu];
                     document.write(kq);
                     break;
-                } else {
-                    document.write("không tìm thấy từ cần tra")
                 }
             }
         }
     </script>
 </body>
+
 </html>
